@@ -1,14 +1,14 @@
 // asking user how many km he wants to travel
 
-const KmToTravel = Number( prompt("Quanti chilometri desideri percorrere?") );
+// const KmToTravel = Number( prompt("Quanti chilometri desideri percorrere?") );
 
-document.getElementById("km").innerHTML = KmToTravel;
+// document.getElementById("km").innerHTML = KmToTravel;
 
 // asking user what's his age
 
-const Age = Number( prompt("Qual è la tua età?") );
+// const Age = Number( prompt("Qual è la tua età?") );
 
-document.getElementById("your-age").innerHTML = Age;
+// document.getElementById("your-age").innerHTML = Age;
 
 
 // Generating base price
