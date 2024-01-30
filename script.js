@@ -6,7 +6,7 @@ const KmToTravel = Number;
 
 // document.getElementById("km").innerHTML = KmToTravel;
 
-const inputElement = document.querySelector("#km");
+const KmElement = document.querySelector("#km");
 
 // asking user what's his age
 
@@ -14,7 +14,9 @@ const inputElement = document.querySelector("#km");
 
 const Age = Number;
 
-document.getElementById("your-age").innerHTML = Age;
+const AgeElement = document.querySelector('#your-age');
+
+// document.getElementById("your-age").innerHTML = Age;
 
 
 // Generating base price
@@ -42,11 +44,11 @@ console.log( finalPrice );
 console.log( "€ " + finalPrice.toFixed(2) );
 
 
-const buttonElement = document.querySelector("#calcola");
+const buttonElement = document.querySelector('#calcola');
 
 buttonElement.addEventListener('click'),
     function() {
-        document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
+        document.getElementById("ticket-total-price").innerHTML = buttonElement.value;
     }
 
 
