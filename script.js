@@ -39,13 +39,24 @@ if(Age < 18) {
 
 const priceElement = document.querySelector('#ticket-total-price');
 
-const buttonElement = document.querySelector('#calcola');
+const buttonElement = document.getElementById("calcola");
 
 buttonElement.addEventListener('click',
     function() {
+        
+        if(Age < 18) {
+            finalPrice = standardPrice - standardPrice * 0.2;
+        } else if (Age >= 65) {
+            finalPrice = standardPrice - standardPrice * 0.4;
+        } else {
+            finalPrice = standardPrice
+        }
+
         document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
-        priceElement = finalPrice.value;
     }
 )
 
 document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
+
+console.log( KmToTravel );
+console.log( "€ " + finalPrice.toFixed(2) );
