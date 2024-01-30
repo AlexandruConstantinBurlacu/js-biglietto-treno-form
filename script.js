@@ -37,18 +37,14 @@ if(Age < 18) {
 }
 
 
-
-
-
-console.log( finalPrice );
-console.log( "€ " + finalPrice.toFixed(2) );
-
+const priceElement = document.querySelector('#ticket-total-price');
 
 const buttonElement = document.querySelector('#calcola');
 
 buttonElement.addEventListener('click'),
     function() {
-        document.getElementById("ticket-total-price").innerHTML = buttonElement.value;
+        document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
+        priceElement = standardPrice.value;
     }
 
 
