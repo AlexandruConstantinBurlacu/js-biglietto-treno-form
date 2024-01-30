@@ -41,11 +41,11 @@ const priceElement = document.querySelector('#ticket-total-price');
 
 const buttonElement = document.querySelector('#calcola');
 
-buttonElement.addEventListener('click'),
+buttonElement.addEventListener('click',
     function() {
         document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
-        priceElement = standardPrice.value;
+        priceElement.value = buttonElement;
     }
-
+)
 
 document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
