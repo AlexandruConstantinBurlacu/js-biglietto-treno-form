@@ -2,19 +2,19 @@
 
 // const KmToTravel = Number( prompt("Quanti chilometri desideri percorrere?") );
 
-const KmToTravel = Number;
+// const KmToTravel = Number;
 
 // document.getElementById("km").innerHTML = KmToTravel;
 
-const KmElement = document.querySelector("#km");
+const KmToTravel = document.getElementById("km").value;
 
 // asking user what's his age
 
 // const Age = Number( prompt("Qual è la tua età?") );
 
-const Age = Number;
+// const Age = Number;
 
-const AgeElement = document.querySelector('#your-age');
+const Age = document.getElementById("your-age").value;
 
 // document.getElementById("your-age").innerHTML = Age;
 
@@ -44,7 +44,7 @@ const buttonElement = document.querySelector('#calcola');
 buttonElement.addEventListener('click',
     function() {
         document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
-        priceElement.value = buttonElement;
+        priceElement = finalPrice.value;
     }
 )
 
