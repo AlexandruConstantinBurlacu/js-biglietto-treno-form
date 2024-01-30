@@ -2,13 +2,19 @@
 
 // const KmToTravel = Number( prompt("Quanti chilometri desideri percorrere?") );
 
+const KmToTravel = Number;
+
 // document.getElementById("km").innerHTML = KmToTravel;
+
+const inputElement = document.querySelector("#km");
 
 // asking user what's his age
 
 // const Age = Number( prompt("Qual è la tua età?") );
 
-// document.getElementById("your-age").innerHTML = Age;
+const Age = Number;
+
+document.getElementById("your-age").innerHTML = Age;
 
 
 // Generating base price
@@ -36,6 +42,12 @@ console.log( finalPrice );
 console.log( "€ " + finalPrice.toFixed(2) );
 
 
+const buttonElement = document.querySelector("#calcola");
+
+buttonElement.addEventListener('click'),
+    function() {
+
+    }
 
 
 document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
