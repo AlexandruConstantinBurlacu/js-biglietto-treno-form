@@ -6,7 +6,7 @@
 
 // document.getElementById("km").innerHTML = KmToTravel;
 
-const KmToTravel = document.getElementById("km").value;
+const KmToTravel = document.getElementById("km");
 
 // asking user what's his age
 
@@ -14,49 +14,61 @@ const KmToTravel = document.getElementById("km").value;
 
 // const Age = Number;
 
-const Age = document.getElementById("your-age").value;
+const Age = document.getElementById("your-age");
 
 // document.getElementById("your-age").innerHTML = Age;
 
 
 // Generating base price
 
-const standardPrice = 0.21 * KmToTravel;
 
 
+let standardPrice;
 
 
 let finalPrice;
 
-if(Age < 18) {
-    finalPrice = standardPrice - standardPrice * 0.2;
-} else if (Age >= 65) {
-    finalPrice = standardPrice - standardPrice * 0.4;
-} else {
-    finalPrice = standardPrice
-}
 
 
-const priceElement = document.querySelector('#ticket-total-price');
+
+const priceElement = document.querySelector("#ticket-total-price");
+
+
+
 
 const buttonElement = document.getElementById("calcola");
 
-buttonElement.addEventListener('click',
+buttonElement.addEventListener("click",
     function() {
         
-        if(Age < 18) {
+        standardPrice = 0.21 * KmToTravel.value;
+
+        finalPrice = standardPrice;
+
+        if(Age.value < 18) {
             finalPrice = standardPrice - standardPrice * 0.2;
-        } else if (Age >= 65) {
+        } else if (Age.value >= 65) {
             finalPrice = standardPrice - standardPrice * 0.4;
         } else {
             finalPrice = standardPrice
         }
 
+        finalPrice = finalPrice.toFixed(2);
+
+        console.log(finalPrice);
+
+        
+
+
+
         document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
+
+        // priceElement.innerHTML = 'il tuo prezzo e di ${finalPrice}';
+        
     }
+
+    
+
 )
 
-document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
-
-console.log( KmToTravel );
-console.log( "€ " + finalPrice.toFixed(2) );
+// document.getElementById("ticket-total-price").innerHTML = "€ " + finalPrice;
